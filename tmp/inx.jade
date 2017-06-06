@@ -1,0 +1,53 @@
+//output:inx.php
+|<?php include '../end/m-config.php';?>
+.importantcontent
+  script.
+    $('.page-overview').css({
+      'background':'url(img/bghen.png)','background-size':'cover','background-repeat':'no-repeat','background-attachment': 'fixed'
+    });
+    $('.wrapp').removeClass('section');
+  article.container
+    .logo-header
+      .lgh
+    .publ
+    nav
+      ul
+        li Inicio
+          a(href='#')
+        li Hentai
+          a(href='#')
+        li Doujinshi
+          a(href='#')
+        li Other Contributions
+          a(href='#')
+    .body
+      .sec#hentai
+        p Ultimos <span>Hentai</span> agregados
+        |<?php $query = "SELECT * FROM hentai WHERE type = 'hentai' LIMIT 0,10";
+        |$res = $conexion->query($query);
+        |while ($row = $res->fetch_assoc()){ ?>
+        figure.hen
+          img(src!='<? echo $row["img"];?>')
+          figcaption <? echo $row["title"];?>
+          a(href!='tmp/<? echo $row["lnk"];?>')
+        |<?php } ?>
+      .sec#doujinshi
+        p Ultimos <span>Doujinshi</span> agregados
+        |<?php $query = "SELECT * FROM hentai WHERE type = 'doujinshi' LIMIT 0,10";
+        |$res = $conexion->query($query);
+        |while ($row = $res->fetch_assoc()){ ?>
+        figure.hen
+          img(src!='<? echo $row["img"];?>')
+          figcaption <? echo $row["title"];?>
+          a(href='tmp/<? echo $row["lnk"];?>')
+        |<?php } ?>
+      .sec#other
+        p Ultimos <span>Aportes</span> agregados
+        |<?php $query = "SELECT * FROM hentai WHERE type = 'other' LIMIT 0,10";
+        |$res = $conexion->query($query);
+        |while ($row = $res->fetch_assoc()){ ?>
+        figure.hen
+          img(src!='<? echo $row["img"];?>')
+          figcaption <? echo $row["title"];?>
+          a(href='tmp/<? echo $row["lnk"];?>')
+        |<?php } ?>

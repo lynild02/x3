@@ -1,0 +1,40 @@
+//output:index.php
+|<?php include 'end/m-config.php';?>
+doctype html
+html(lang='es' ng-app='xApp')
+    head
+        title LC | Temptation
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+        meta(name='description', content='Porn content for everybody person, every fetish, every type of Temptation.')
+        meta(name='keywords', content='Limbo, City, Pro, Porn, adult, xxx, Porno, adultos, chicas, teens, milf, sex, sexo, coger, cojer, hentai, japones, anime, ecchi, doujinshi, dibujos, caricaturas')
+        meta(name='author', content='Lynild')
+        meta(name="robots", content="no-index, no-follow")
+        //- ----- link website ----- //
+        link(rel='icon' href!='<?=$serv?>src/img/favicon.png' type='image/x-icon')
+        //- ----- CSS Files ----- //
+        link(rel='stylesheet', href!='<?=$serv?>Skeleton/css/normalize.css')
+        link(rel='stylesheet', href!='<?=$serv?>Skeleton/css/skeleton.css')
+        link(rel='stylesheet', href!='<?=$serv?>node_modules/loaders.css/loaders.min.css')
+        link(rel='stylesheet', href='css/master.min.css')
+        //- ---- JS Files ----- //
+        script(type='text/javascript', src!='<?=$serv?>node_modules/jquery/dist/jquery.js')
+        script(type='text/javascript', src='node_modules/angular/angular.js')
+        script(type='text/javascript', src!='node_modules/angular-route/angular-route.min.js')
+        script(type='text/javascript', src!='<?=$serv?>node_modules/fullpage.js/vendors/scrolloverflow.js')
+        script(type='text/javascript', src!='<?=$serv?>node_modules/loaders.css/loaders.css.js')
+        script(type='text/javascript', src!='<?=$serv?>node_modules/jquery-lazyload/jquery.lazyload.js')
+        link(rel='stylesheet', href!='<?=$serv?>node_modules/fullpage.js/dist/jquery.fullpage.min.css')
+        script(type='text/javascript', src!='<?=$serv?>node_modules/fullpage.js/dist/jquery.fullpage.js')
+        script(type='text/javascript', src='js/main.js')
+        
+    body.page-overview
+      //- ---- First ---- //
+      .loader-c
+        .loader
+          .ball-scale-multiple
+      #fullpage
+        .wrapp.section
+          div(ng-view)
+      footer
+        h1 Hello im a footer

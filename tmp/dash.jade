@@ -1,0 +1,34 @@
+//output:dash.php
+script.
+  $('.wrapp').css({
+    //'background':'#000'
+  });
+
+|<?php include '../end/m-config.php';?>
+header
+nav
+  ul
+    li videos
+      a(href='#' target='_blank')
+    li photos
+      a(href='#' target='_blank')
+    li real
+      a(href='#' target='_blank')
+    li about
+      a(href='#' target='_blank')
+.content
+  //- ---- Aqui proceso de presentacion 3 principales ---- //
+  |<?php
+  |  echo 'Hello!';
+  |  $query="SELECT * FROM videos ORDER BY id DESC LIMIT 0, 48";
+  |  $do = $conexion->query($query);
+  |  if($query){echo 'Yes Query!';} else {echo 'No query!';}
+  //- ---- Bucle ---- //
+  |while($row=$do->fetch_assoc()){ ?>
+  div.video-container
+    div.thumb
+      img(src!='<? echo $row["img"];?>')
+      a(href!='<? echo $row["lnk"];?>')
+    p.
+      <? echo $row["title"];?>
+  |<?php } ?>
