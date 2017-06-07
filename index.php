@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="<?=$serv?>node_modules/loaders.css/loaders.min.css">
     <link rel="stylesheet" href="css/master.min.css">
     <script type="text/javascript" src="<?=$serv?>node_modules/jquery/dist/jquery.js"></script>
-    <script type="text/javascript" src="node_modules/angular/angular.js"></script>
-    <script type="text/javascript" src="node_modules/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+    <script type="text/javascript" src="<?=$serv?>node_modules/angular-route/angular-route.min.js"></script>
     <script type="text/javascript" src="<?=$serv?>node_modules/fullpage.js/vendors/scrolloverflow.js"></script>
     <script type="text/javascript" src="<?=$serv?>node_modules/loaders.css/loaders.css.js"></script>
     <script type="text/javascript" src="<?=$serv?>node_modules/jquery-lazyload/jquery.lazyload.js"></script>

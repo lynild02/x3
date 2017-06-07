@@ -4,6 +4,7 @@ include '../end/m-config.php';
 $id  = evaluar($_GET['id']);
 $cdb  = $conexion->query("SELECT * FROM hentai WHERE id=$id");
 $row = $cdb->fetch_assoc();
+$tit = $row['title'];
 ?><!DOCTYPE html>
 <html lang="es">
   <head>
@@ -24,14 +25,29 @@ $row = $cdb->fetch_assoc();
     <script type="text/javascript" src="<?=$serv?>node_modules/jquery-lazyload/jquery.lazyload.js"></script>
   </head>
   <body class="page-overview">
+    <div class="loader-c">
+      <div class="loader">
+        <div class="ball-scale-multiple"></div>
+      </div>
+    </div>
     <article class="container">
       <div class="header-logo"></div>
       <div class="publ"></div>
       <div class="body">
-        <div id="video-content"><? echo $row['cont'];?></div>
-        <p class="clear-a">Aclaramos que los videos contenidos vienes de varias paginas web, para que los puedas disfrutar, pero no si el reconocimiento de otras paginas.</p>
+        <div id="video-content"><? echo $row['chapter'];?></div>
+        <p class="clear-a"><span>Aclaramos</span> que la mayoria del contenido es recolectado e indexado desde otras web, pero les haremos mencion de estas... <a href='web.php'>aqui</a></p>
         <div id="sinopsis">
-          <p><? echo $row['sin'];?></p>
+          <p>Lel</p>
+        </div>
+        <div id="interest">
+          <div>
+            <p>Tal vez te pueda interesar...</p>
+            <div class="row">
+              <figure class="columns three"><img src="#" title="title" alt="alt" attr>
+                <figcaption> </figcaption>
+              </figure>
+            </div>
+          </div>
         </div>
       </div>
     </article>

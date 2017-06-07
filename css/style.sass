@@ -1,7 +1,31 @@
 *
   box-sizing: border-box
+$lounge: #d3394c
 .page-overview
+  background: url(../img/bg-view.jpg)
+    size: cover
+    repeat: no-repeat
+    position: center center
+  background-attachment: fixed
+  .loader-c
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: #000
+    z-index: 11
+    transition: all .5s ease-in-out
+    .loader
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      z-index: 12
   article.container
+    padding: 20px 5px
+    background: rgba(0,0,0,.5)
+    -webkit-backdrop-filter: blur(20px)
     .header-logo
       background: url(../img/banner/bann.png)
         size: contain
@@ -25,9 +49,26 @@
         color: #fff
         height: auto
         padding: 5px 0
+        span
+          font-weight: bold
+          color: $lounge
       #sinopsis
-        color: #000
+        color: #fff
         text-align: left
         padding: 10px
-        p>span
-          font-weight: bold
+        background: #000
+        border-radius: 15px
+        margin-bottom: 10px
+      #interest
+        width: 100%
+        border-radius: 15px
+        background: #000
+        padding: 5px
+        margin-bottom: 10px
+        div
+          p
+            color: #fff
+          .row
+            figure
+              display: inline-block
+              margin: 0

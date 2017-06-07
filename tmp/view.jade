@@ -4,6 +4,7 @@
 |$id  = evaluar($_GET['id']);
 |$cdb  = $conexion->query("SELECT * FROM hentai WHERE id=$id");
 |$row = $cdb->fetch_assoc();
+|$tit = $row['title'];
 |?>
 doctype html
 html(lang='es')
@@ -28,17 +29,29 @@ html(lang='es')
         script(type='text/javascript', src!='<?=$serv?>node_modules/jquery/dist/jquery.js')
         script(type='text/javascript', src!='<?=$serv?>node_modules/loaders.css/loaders.css.js')
         script(type='text/javascript', src!='<?=$serv?>node_modules/jquery-lazyload/jquery.lazyload.js')
+        
     body.page-overview
+      .loader-c
+        .loader
+          .ball-scale-multiple
       article.container
         .header-logo
         .publ
         .body
           div#video-content
-            <? echo $row['cont'];?>
+            <? echo $row['chapter'];?>
           p.clear-a.
-            Aclaramos que los videos contenidos vienes de varias paginas web, para que los puedas disfrutar, pero no si el reconocimiento de otras paginas.
+            <span>Aclaramos</span> que la mayoria del contenido es recolectado e indexado desde otras web, pero les haremos mencion de estas... <a href='web.php'>aqui</a>
           #sinopsis
-            p <? echo $row['sin'];?>
+            p Lel
+          #interest
+            div
+              p Tal vez te pueda interesar...
+              .row
+                figure.columns.three
+                  img(src='#', title="title", alt="alt", attr)
+                  figcaption 
+          
           
       footer
     script(type='text/javascript', src='../js/main.js')
