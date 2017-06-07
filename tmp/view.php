@@ -3,8 +3,7 @@
 include '../end/m-config.php';
 $id  = evaluar($_GET['id']);
 $cdb  = $conexion->query("SELECT * FROM hentai WHERE id=$id");
-$row = $cdb->fetch_assoc();
-$tit = $row['title'];
+while($row = $cdb->fetch_assoc()){
 ?><!DOCTYPE html>
 <html lang="es">
   <head>
@@ -34,11 +33,21 @@ $tit = $row['title'];
       <div class="header-logo"></div>
       <div class="publ"></div>
       <div class="body">
-        <div id="video-content"><? echo $row['chapter'];?></div>
+        <h2 class="title"><? echo $row['title'];?> &mdash; All Chapters</h2>
         <p class="clear-a"><span>Aclaramos</span> que la mayoria del contenido es recolectado e indexado desde otras web, pero les haremos mencion de estas... <a href='web.php'>aqui</a></p>
         <div id="sinopsis">
-          <p>Lel</p>
+          <p><? echo $row['sinopsis'];?></p>
         </div>
+        <div class="video-content"><? echo $row['chapter1'];?></div>
+        <div class="video-content"><? echo $row['chapter2'];?></div>
+        <div class="video-content"><? echo $row['chapter3'];?></div>
+        <div class="video-content"><? echo $row['chapter4'];?></div>
+        <div class="video-content"><? echo $row['chapter5'];?></div>
+        <div class="video-content"><? echo $row['chapter6'];?></div>
+        <div class="video-content"><? echo $row['chapter7'];?></div>
+        <div class="video-content"><? echo $row['chapter8'];?></div>
+        <div class="video-content"><? echo $row['chapter9'];?></div>
+        <div class="video-content"><? echo $row['chapter10'];?></div>
         <div id="interest">
           <div>
             <p>Tal vez te pueda interesar...</p>
@@ -54,4 +63,4 @@ $tit = $row['title'];
     <footer></footer>
   </body>
   <script type="text/javascript" src="../js/main.js"></script>
-</html>
+</html><?php } ?>

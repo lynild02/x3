@@ -3,8 +3,7 @@
 |include '../end/m-config.php';
 |$id  = evaluar($_GET['id']);
 |$cdb  = $conexion->query("SELECT * FROM hentai WHERE id=$id");
-|$row = $cdb->fetch_assoc();
-|$tit = $row['title'];
+|while($row = $cdb->fetch_assoc()){
 |?>
 doctype html
 html(lang='es')
@@ -38,12 +37,31 @@ html(lang='es')
         .header-logo
         .publ
         .body
-          div#video-content
-            <? echo $row['chapter'];?>
+          h2.title <? echo $row['title'];?> &mdash; All Chapters
           p.clear-a.
             <span>Aclaramos</span> que la mayoria del contenido es recolectado e indexado desde otras web, pero les haremos mencion de estas... <a href='web.php'>aqui</a>
           #sinopsis
-            p Lel
+            p <? echo $row['sinopsis'];?>
+          div.video-content
+            <? echo $row['chapter1'];?>
+          div.video-content
+            <? echo $row['chapter2'];?>
+          div.video-content
+            <? echo $row['chapter3'];?>
+          div.video-content
+            <? echo $row['chapter4'];?>
+          div.video-content
+            <? echo $row['chapter5'];?>
+          div.video-content
+            <? echo $row['chapter6'];?>
+          div.video-content
+            <? echo $row['chapter7'];?>
+          div.video-content
+            <? echo $row['chapter8'];?>
+          div.video-content
+            <? echo $row['chapter9'];?>
+          div.video-content
+            <? echo $row['chapter10'];?>
           #interest
             div
               p Tal vez te pueda interesar...
@@ -55,3 +73,5 @@ html(lang='es')
           
       footer
     script(type='text/javascript', src='../js/main.js')
+
+|<?php } ?>

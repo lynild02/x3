@@ -21,7 +21,7 @@
     </nav>
     <div class="body">
       <div id="hentai" class="sec">
-        <p>Ultimos <span>Hentai</span> agregados</p><?php $query = "SELECT * FROM hentai WHERE type = 'hentai' LIMIT 0,10";
+        <p>Ultimos <span>Hentai</span> agregados.. <a href='all-hentai.php'>ver mas</a></p><?php $query = "SELECT * FROM hentai WHERE type = 'hentai' LIMIT 0,10";
         $res = $conexion->query($query);
         while ($row = $res->fetch_assoc()){ ?>
         <figure class="hen"><img src="<? echo $row["img"];?>"/>
@@ -29,7 +29,7 @@
         </figure><?php } ?>
       </div>
       <div id="doujinshi" class="sec">
-        <p>Ultimos <span>Doujinshi</span> agregados</p><?php $query = "SELECT * FROM hentai WHERE type = 'doujinshi' LIMIT 0,10";
+        <p>Ultimos <span>Doujinshi</span> agregados.. <a href='all-doujinshi.php'>ver mas</a></p><?php $query = "SELECT * FROM hentai WHERE type = 'doujinshi' LIMIT 0,10";
         $res = $conexion->query($query);
         while ($row = $res->fetch_assoc()){ ?>
         <figure class="hen"><img src="<? echo $row["img"];?>"/>
@@ -37,7 +37,7 @@
         </figure><?php } ?>
       </div>
       <div id="other" class="sec">
-        <p>Ultimos <span>Aportes</span> agregados</p><?php $query = "SELECT * FROM hentai WHERE type = 'other' LIMIT 0,10";
+        <p>Ultimos <span>Aportes</span> agregados.. <a href='all-other.php'>ver mas</a></p><?php $query = "SELECT * FROM hentai WHERE type = 'other' LIMIT 0,10";
         $res = $conexion->query($query);
         while ($row = $res->fetch_assoc()){ ?>
         <figure class="hen"><img src="<? echo $row["img"];?>"/>

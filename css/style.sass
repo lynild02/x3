@@ -23,17 +23,26 @@ $lounge: #d3394c
       transform: translate(-50%, -50%)
       z-index: 12
   article.container
+    margin-top: 20px
+    margin-bottom: 20px
     padding: 20px 5px
     background: rgba(0,0,0,.5)
     -webkit-backdrop-filter: blur(20px)
     .header-logo
-      background: url(../img/banner/bann.png)
-        size: contain
+      width: 100%
+      min-height: 250px
+      background: url(../img/logo/heavensbanner.png)
+        size: cover
         repeat: no-repeat
         position: center center
     .publ
     .body
-      div#video-content
+      .title
+        color: $lounge
+        font-family: sans-serif
+        margin-top: 10px
+        text-shadow: rgba(0,0,0,.3) 2px 3px 3px
+      div.video-content
         background: #000
         width: 100%
         text-align: center
@@ -42,6 +51,8 @@ $lounge: #d3394c
         iframe
           margin: auto !important
           width: 100% !important
+          margin-top: 10px
+          margin-bottom: 10px
       .clear-a
         text-align: center
         background: #000
