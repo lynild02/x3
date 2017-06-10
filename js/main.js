@@ -2,7 +2,7 @@ window.onload = function(){
   $('.loader-c').fadeOut('slow');
 };
 $(document).ready(function(){
-  $('#fullpage').fullpage({autoScrolling: false});
+  $('#fullpage').fullpage({normalScrollElements: '.importantcontent'});
   $('.ball-scale-multiple').loaders();
   $("img.lazy").lazyload();
 });

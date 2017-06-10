@@ -9,8 +9,6 @@
   	echo "An error has ocurred while try to connect with the DB {$conexion->connect_errno}";
   }
 
-  $conexion2 = mysql_connect("localhost:3306", "limbocit_webmast", "gVF-cR6-sp2-eSx", "limbocit_x3");
-
   $serv='http://limbocity.xyz/';
 
   function evaluar($valor)

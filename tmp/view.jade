@@ -11,13 +11,13 @@ html(lang='es')
         title <? echo $row['title'];?>
         meta(charset='utf-8')
         meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
-        meta(name='description', content='Por que todos amamos la animacion erotica japonesa!')
-        meta(name='keywords', content='hentai, adultos, caricaturas, porno, sexo, acto, japones,asia, asiticas, nipon, ecchi, desnudo, desnuda, coger, cojer, xxx')
+        meta(name='description', content='Heaven Night, division erotica de Limbo City PRO, por que a todos nos gusta el hentai, pero casi nadie lo dice...')
+        meta(name='keywords', content='hentai, adultos, caricaturas, porno, sexo, acto, japones,asia, asiticas, nipon, ecchi, desnudo, desnuda, coger, cojer, xxx, heaven, night, PRO, pro, limbo, city, lynild, angel')
         meta(name='author', content='Lynild')
-        meta(name="robots", content="index, follow")
+        meta(name="robots", content="no-index, no-follow")
 
         //- ----- link website ----- //
-        link(rel='icon' href='src/img/favicon.png' type='image/x-icon')
+        link(rel='icon' href!='<?=$serv?>src/img/favicon.png' type='image/x-icon')
 
         //- ----- CSS Files ----- //
         link(rel='stylesheet', href!='<?=$serv?>Skeleton/css/normalize.css')
@@ -28,6 +28,14 @@ html(lang='es')
         script(type='text/javascript', src!='<?=$serv?>node_modules/jquery/dist/jquery.js')
         script(type='text/javascript', src!='<?=$serv?>node_modules/loaders.css/loaders.css.js')
         script(type='text/javascript', src!='<?=$serv?>node_modules/jquery-lazyload/jquery.lazyload.js')
+        script.
+          (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.9";
+            fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));
         
     body.page-overview
       .loader-c
@@ -36,12 +44,36 @@ html(lang='es')
       article.container
         .header-logo
         .publ
+          //- --- JuicyAds v3.0 --- -//
+          script(async src="//adserver.juicyads.com/js/jads.js")
+          ins(id="591985" data-width="728" data-height="102")
+          script.
+            (adsbyjuicy = window.adsbyjuicy||[]).push({'adzone':591985});
+          //- ---JuicyAds END--- -//
+        .fb-likek.row
+          .fb-page.columns.six(data-href="https://www.facebook.com/heavensnight6/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false")
+            blockquote(cite="https://www.facebook.com/heavensnight6/" class="fb-xfbml-parse-ignore")
+              a(href="https://www.facebook.com/heavensnight6/") Heaven&#039;s Night
+          .fb-page.columns.six(data-href="https://www.facebook.com/limbocity/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false")
+            blockquote(cite="https://www.facebook.com/limbocity/" class="fb-xfbml-parse-ignore")
+              a(href="https://www.facebook.com/limbocity/") Limbo City
         .body
           h2.title <? echo $row['title'];?> &mdash; All Chapters
+          h4.ttl <? echo $row['type'];?>
+          nav
+            ul
+              li Inicio
+                a(href='/#!/inx')
+              li Hentai
+                a(href='all-hentai.php')
+              li Doujinshi
+                a(href='all-doujinshi.php')
+              li Other Contributions
+                a(href='all-other.php')
           p.clear-a.
             <span>Aclaramos</span> que la mayoria del contenido es recolectado e indexado desde otras web, pero les haremos mencion de estas... <a href='web.php'>aqui</a>
           #sinopsis
-            p <? echo $row['sinopsis'];?>
+            p <span>Sinopsis:</span>&nbsp;<? echo $row['sinopsis'];?>
           div.video-content
             <? echo $row['chapter1'];?>
           div.video-content
@@ -64,14 +96,59 @@ html(lang='es')
             <? echo $row['chapter10'];?>
           #interest
             div
-              p Tal vez te pueda interesar...
+              p.title Tal vez te pueda interesar...
               .row
-                figure.columns.three
-                  img(src='#', title="title", alt="alt", attr)
-                  figcaption 
-          
-          
+                |<?php $q="SELECT * FROM hentai LIMIT 0,4"; $res = $conexion->query($q); while ($row = $res->fetch_assoc()){ ?>
+                figure.columns.three.hen.rr
+                  img.rrst(src!='<? echo $row["img"];?>' alt!='<? echo $row["title"];?>')
+                  figcaption <? echo $row["title"];?>
+                  a(href!='http://short.am/s/49390?s=<? echo $row["lnk"];?>')
+                |<?php } ?>
+          .fb-book
+            div.fb-comments(data-href="http://heaven-night.com/" data-width="100%" data-numposts="5")
       footer
+        article.container
+          .row
+            .columns.three.pa
+              h4 More
+              ul
+                li
+                  a(href='http://limbocity.xyz') Limbo City
+                li
+                  a(href='/#!/') Inicio
+                li
+                  a(href='/tmp/all-doujinshi.php') Doujinshi
+                li
+                  a(href='/tmp/all-other.php') Aportes
+            .columns.three.pa
+              h4 Redes
+              ul
+                li
+                  a(href='https://www.facebook.com/heavensnight6') Facebook
+                li
+                  a(href='#') Twitter
+                li
+                  a(href='#') Instagram
+            .columns.six.pa#mc_embed_signup
+              h4 Newsletter
+              p <strong>Suscribete para recibir actualizaciones</strong> Recibe las noticias y mensajes lo mas pronto posible.
+              form.row#mc-embedded-subscribe-form(action="//xyz.us12.list-manage.com/subscribe/post?u=1f3f3272787af7763f0467cdd&amp;id=e2ca5ccacd" method="post" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate)
+                .columns.eight
+                  input.u-full-width.email#mce-EMAIL(type="email" value="" name="EMAIL" placeholder="Correo Electronico" required)
+                div(style="position: absolute; left: -5000px;" aria-hidden="true")
+                  input(type="text" name="b_1f3f3272787af7763f0467cdd_e2ca5ccacd" tabindex="-1" value="")
+                .columns.four
+                  input.button-primary#mc-embedded-subscribe.button(type='submit' name="subscribe" value='Suscribir')
+          p.
+            "Heaven's Night" es una division de <a href='http://limbocity.xyz' target='_blank'>"Limbo City"</a>, el hecho de estar navegando por esta pagina implica que aceptas la politica de Cookies y el tipo de material por el que existe este sitio (segun nuestras <a href='http://privacy.limbocity.xyz' target='_blank'>politicas de uso y privacidad</a>). Ademas de declarar que eres mayor de edad segun las leyes de la localidad en que vivas.
     script(type='text/javascript', src='../js/main.js')
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-100788127-1', 'auto');
+      ga('send', 'pageview');
 
 |<?php } ?>

@@ -6,48 +6,112 @@
       'background':'url(img/bghen.png)','background-size':'cover','background-repeat':'no-repeat','background-attachment': 'fixed'
     });
     $('.wrapp').removeClass('section');
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.9";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  
   article.container
     .logo-header
       .lgh
     .publ
+      //- --- JuicyAds v3.0 --- -//
+      script(async src="//adserver.juicyads.com/js/jads.js")
+      ins(id="591985" data-width="728" data-height="102")
+      script.
+        (adsbyjuicy = window.adsbyjuicy||[]).push({'adzone':591985});
+      //- ---JuicyAds END--- -//
     nav
       ul
         li Inicio
-          a(href='#')
+          a(href='/#!/inx')
         li Hentai
-          a(href='#')
+          a(href='tmp/all-hentai.php')
         li Doujinshi
-          a(href='#')
+          a(href='tmp/all-doujinshi.php')
         li Other Contributions
-          a(href='#')
+          a(href='tmp/all-other.php')
+    .fb-likek.row
+      .fb-page.columns.six(data-href="https://www.facebook.com/heavensnight6/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false")
+        blockquote(cite="https://www.facebook.com/heavensnight6/" class="fb-xfbml-parse-ignore")
+          a(href="https://www.facebook.com/heavensnight6/") Heaven&#039;s Night
+      .fb-page.columns.six(data-href="https://www.facebook.com/limbocity/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false")
+        blockquote(cite="https://www.facebook.com/limbocity/" class="fb-xfbml-parse-ignore")
+          a(href="https://www.facebook.com/limbocity/") Limbo City
+    //- ---- SEARCH ---- -//
+    form(method="POST" action="tmp/srch.php")
+      h4 Busca el HENTAI que quieras!
+      .row
+        input.columns.eight(type="text" placeholder="Buscar Hentai" name="palabra")
+        input.columns.four(type="submit" value="Buscar" name="buscar")
     .body
       .sec#hentai
-        p Ultimos <span>Hentai</span> agregados.. <a href='all-hentai.php'>ver mas</a>
-        |<?php $query = "SELECT * FROM hentai WHERE type = 'hentai' LIMIT 0,10";
+        p Ultimos <span>Hentai</span> agregados.. <a href='tmp/all-hentai.php'>ver mas</a>
+        |<?php $query = "SELECT * FROM hentai WHERE type = 'hentai' ORDER BY id DESC LIMIT 0,10";
         |$res = $conexion->query($query);
         |while ($row = $res->fetch_assoc()){ ?>
-        figure.hen
-          img(src!='<? echo $row["img"];?>')
+        figure.hen.rr
+          img.rrst(src!='<? echo $row["img"];?>')
           figcaption <? echo $row["title"];?>
-          a(href!='tmp/<? echo $row["lnk"];?>')
+          a(href!='http://short.am/s/49390?s=http://heaven-night.com/tmp/<? echo $row["lnk"];?>')
         |<?php } ?>
       .sec#doujinshi
-        p Ultimos <span>Doujinshi</span> agregados.. <a href='all-doujinshi.php'>ver mas</a>
-        |<?php $query = "SELECT * FROM hentai WHERE type = 'doujinshi' LIMIT 0,10";
+        p Ultimos <span>Doujinshi</span> agregados.. <a href='tmp/all-doujinshi.php'>ver mas</a>
+        |<?php $query = "SELECT * FROM hentai WHERE type = 'doujinshi' ORDER BY id DESC LIMIT 0,10";
         |$res = $conexion->query($query);
         |while ($row = $res->fetch_assoc()){ ?>
         figure.hen
           img(src!='<? echo $row["img"];?>')
           figcaption <? echo $row["title"];?>
-          a(href='tmp/<? echo $row["lnk"];?>')
+          a(href!='http://short.am/s/49390?s=http://heaven-night.com/tmp/<? echo $row["lnk"];?>')
         |<?php } ?>
       .sec#other
-        p Ultimos <span>Aportes</span> agregados.. <a href='all-other.php'>ver mas</a>
-        |<?php $query = "SELECT * FROM hentai WHERE type = 'other' LIMIT 0,10";
+        p Ultimos <span>Aportes</span> agregados.. <a href='tmp/all-other.php'>ver mas</a>
+        |<?php $query = "SELECT * FROM hentai WHERE type = 'other' ORDER BY id DESC LIMIT 0,10";
         |$res = $conexion->query($query);
         |while ($row = $res->fetch_assoc()){ ?>
         figure.hen
           img(src!='<? echo $row["img"];?>')
           figcaption <? echo $row["title"];?>
-          a(href='tmp/<? echo $row["lnk"];?>')
+          a(href!='http://short.am/s/49390?s=http://heaven-night.com/tmp/<? echo $row["lnk"];?>')
         |<?php } ?>
+    .fb-book
+      div.fb-comments(data-href="http://heaven-night.com/" data-width="100%" data-numposts="5")
+footer
+  article.container
+    .row
+      .columns.three.pa
+        h4 More
+        ul
+          li
+            a(href='http://limbocity.xyz') Limbo City
+          li
+            a(href='/#!/') Inicio
+          li
+            a(href='/tmp/all-doujinshi.php') Doujinshi
+          li
+            a(href='/tmp/all-other.php') Aportes
+      .columns.three.pa
+        h4 Redes
+        ul
+          li
+            a(href='https://www.facebook.com/heavensnight6') Facebook
+          li
+            a(href='#') Twitter
+          li
+            a(href='#') Instagram
+      .columns.six.pa#mc_embed_signup
+        h4 Newsletter
+        p <strong>Suscribete para recibir actualizaciones</strong> Recibe las noticias y mensajes lo mas pronto posible.
+        form.row#mc-embedded-subscribe-form(action="//xyz.us12.list-manage.com/subscribe/post?u=1f3f3272787af7763f0467cdd&amp;id=e2ca5ccacd" method="post" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate)
+          .columns.eight
+            input.u-full-width.email#mce-EMAIL(type="email" value="" name="EMAIL" placeholder="Correo Electronico" required)
+          div(style="position: absolute; left: -5000px;" aria-hidden="true")
+            input(type="text" name="b_1f3f3272787af7763f0467cdd_e2ca5ccacd" tabindex="-1" value="")
+          .columns.four
+            input.button-primary#mc-embedded-subscribe.button(type='submit' name="subscribe" value='Suscribir')
+    p.
+      "Heaven's Night" es una division de <a href='http://limbocity.xyz' target='_blank'>"Limbo City"</a>, el hecho de estar navegando por esta pagina implica que aceptas la politica de Cookies y el tipo de material por el que existe este sitio (segun nuestras <a href='http://privacy.limbocity.xyz' target='_blank'>politicas de uso y privacidad</a>). Ademas de declarar que eres mayor de edad segun las leyes de la localidad en que vivas.

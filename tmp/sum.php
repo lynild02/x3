@@ -1,3 +1,0 @@
-<?php
-$snd = 'chapter'.++i;
-?>

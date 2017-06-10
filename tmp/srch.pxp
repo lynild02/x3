@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Result</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="description">
+    <meta name="keywords" content="keywords">
+    <meta name="author" content="author">
+    <meta name="robots" content="no-index, no-follow">
+    <link rel="icon" href="src/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body class="page-overview"><?php if($_POST['buscar']){ ?>
+    <table width="100%" border="0" align="center" cellpadding="1" cellspacing="1">
+      <tr>
+        <td width="100" align="center"><strong>Nombre</strong></td>
+      </tr><?php $buscar = $_POST["palabra"];  
+      $qry = "SELECT * FROM hentai WHERE title LIKE '%$buscar%'";
+      $dot = $conexion->query($qry);
+      while ($registro = $dot->fetch_assoc()) { ?> 
+      <tr>
+        <td align="center" class="estilo-tabla"><? echo $registro['title'];?></td>
+      </tr><?php } ?>
+    </table><?php } ?>
+  </body>
+</html>
