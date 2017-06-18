@@ -29,6 +29,14 @@
       });
       
     </script>
+    <script type="text/javascript" async>
+      var _prvar=_prvar||new Object();
+      (function(pa,s){if(document.getElementById('pr444a070e'))return false;
+      
+      pa=document.createElement('script');pa.type='text/javascript';pa.async=true;pa.id='pr444a070e';pa.src='//prscripts.com/pub.js';
+          s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(pa,s);})();
+      
+    </script>
   </head>
   <body class="page-overview">
     <article class="container frst">
@@ -62,6 +70,9 @@
             <figcaption><? echo $row["title"];?></figcaption><a href="http://short.am/s/49390?s=http://heaven-night.com/tmp/<? echo $row["lnk"];?>"></a>
           </figure><?php } ?>
         </div>
+      </div>
+      <div class="publ">
+        <div id="pr-nml0" style="height:198px;width:900px;" class="pr-widget"></div>
       </div>
       <div class="fb-book">
         <div data-href="http://heaven-night.com/" data-width="100%" data-numposts="5" class="fb-comments"></div>

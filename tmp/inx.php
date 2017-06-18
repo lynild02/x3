@@ -14,13 +14,24 @@
     }(document, 'script', 'facebook-jssdk'));
     
   </script>
+  <script type="text/javascript" async="async">
+    var _prvar=_prvar||new Object();
+    (function(pa,s){if(document.getElementById('pr444a070e'))return false;
+    
+    pa=document.createElement('script');pa.type='text/javascript';pa.async=true;pa.id='pr444a070e';pa.src='//prscripts.com/pub.js';
+        s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(pa,s);})();
+    
+  </script>
   <article class="container">
     <div class="logo-header">
       <div class="lgh"></div>
     </div>
     <div class="publ">
-      <script async="async" src="//adserver.juicyads.com/js/jads.js"></script><ins id="591985" data-width="728" data-height="102"></ins>
-      <script>(adsbyjuicy = window.adsbyjuicy||[]).push({'adzone':591985});</script>
+      <script async="async" src="//adserver.juicyads.com/js/jads.js"></script><ins id="592757" data-width="728" data-height="102"></ins>
+      <script>(adsbyjuicy = window.adsbyjuicy || []).push({'adzone':592757});</script>
+    </div>
+    <div class="publ">
+      <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/201935314&amp;amp;color=ff5500&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_comments=true&amp;amp;show_user=true&amp;amp;show_reposts=false"></iframe>
     </div>
     <nav>
       <ul>
@@ -58,7 +69,7 @@
         <p>Ultimos <span>Doujinshi</span> agregados.. <a href='tmp/all-doujinshi.php'>ver mas</a></p><?php $query = "SELECT * FROM hentai WHERE type = 'doujinshi' ORDER BY id DESC LIMIT 0,10";
         $res = $conexion->query($query);
         while ($row = $res->fetch_assoc()){ ?>
-        <figure class="hen"><img src="<? echo $row["img"];?>"/>
+        <figure class="hen rr"><img src="<? echo $row["img"];?>" class="rrst"/>
           <figcaption><? echo $row["title"];?></figcaption><a href="http://short.am/s/49390?s=http://heaven-night.com/tmp/<? echo $row["lnk"];?>"></a>
         </figure><?php } ?>
       </div>
@@ -66,7 +77,7 @@
         <p>Ultimos <span>Aportes</span> agregados.. <a href='tmp/all-other.php'>ver mas</a></p><?php $query = "SELECT * FROM hentai WHERE type = 'other' ORDER BY id DESC LIMIT 0,10";
         $res = $conexion->query($query);
         while ($row = $res->fetch_assoc()){ ?>
-        <figure class="hen"><img src="<? echo $row["img"];?>"/>
+        <figure class="hen rr"><img src="<? echo $row["img"];?>" class="rrst"/>
           <figcaption><? echo $row["title"];?></figcaption><a href="http://short.am/s/49390?s=http://heaven-night.com/tmp/<? echo $row["lnk"];?>"></a>
         </figure><?php } ?>
       </div>

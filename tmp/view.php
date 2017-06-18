@@ -13,7 +13,12 @@ while($row = $cdb->fetch_assoc()){
     <meta name="description" content="Heaven Night, division erotica de Limbo City PRO, por que a todos nos gusta el hentai, pero casi nadie lo dice...">
     <meta name="keywords" content="hentai, adultos, caricaturas, porno, sexo, acto, japones,asia, asiticas, nipon, ecchi, desnudo, desnuda, coger, cojer, xxx, heaven, night, PRO, pro, limbo, city, lynild, angel">
     <meta name="author" content="Lynild">
-    <meta name="robots" content="no-index, no-follow">
+    <meta name="robots" content="index, follow">
+    <meta property="og:url" content="<?php echo 'http://heaven-night.com/tmp/view.php?id=' . $id; ?>">
+    <meta property="og:image" content="<?php echo $row['img'];?>">
+    <meta property="og:locale" content="es_es">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Disponible en Heaven's Night.">
     <link rel="icon" href="<?=$serv?>src/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="<?=$serv?>Skeleton/css/normalize.css">
     <link rel="stylesheet" href="<?=$serv?>Skeleton/css/skeleton.css">
@@ -30,15 +35,21 @@ while($row = $cdb->fetch_assoc()){
         js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.9";
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script type="text/javascript" async>
+      var _prvar=_prvar||new Object();
+      (function(pa,s){if(document.getElementById('pr444a070e'))return false;
+      
+      pa=document.createElement('script');pa.type='text/javascript';pa.async=true;pa.id='pr444a070e';pa.src='//prscripts.com/pub.js';
+          s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(pa,s);})();
       
     </script>
   </head>
   <body class="page-overview">
-    <div class="loader-c">
-      <div class="loader">
-        <div class="ball-scale-multiple"></div>
-      </div>
-    </div>
+    <!--.loader-c
+    //.loader
+      //.ball-scale-multiple
+    -->
     <article class="container">
       <div class="header-logo"></div>
       <div class="publ">
@@ -55,7 +66,6 @@ while($row = $cdb->fetch_assoc()){
       </div>
       <div class="body">
         <h2 class="title"><? echo $row['title'];?> &mdash; All Chapters</h2>
-        <h4 class="ttl"><? echo $row['type'];?></h4>
         <nav>
           <ul>
             <li>Inicio<a href="/#!/inx"></a></li>
@@ -66,7 +76,9 @@ while($row = $cdb->fetch_assoc()){
         </nav>
         <p class="clear-a"><span>Aclaramos</span> que la mayoria del contenido es recolectado e indexado desde otras web, pero les haremos mencion de estas... <a href='web.php'>aqui</a></p>
         <div id="sinopsis">
-          <p><span>Sinopsis:</span>&nbsp;<? echo $row['sinopsis'];?></p>
+          <div class="row"><img src="<?php echo $row['img'];?>" alt="principal" class="columns two">
+            <p class="columns ten"><span>Sinopsis:</span>&nbsp;<? echo $row['sinopsis'];?></p>
+          </div>
         </div>
         <div class="video-content"><? echo $row['chapter1'];?></div>
         <div class="video-content"><? echo $row['chapter2'];?></div>
@@ -78,12 +90,15 @@ while($row = $cdb->fetch_assoc()){
         <div class="video-content"><? echo $row['chapter8'];?></div>
         <div class="video-content"><? echo $row['chapter9'];?></div>
         <div class="video-content"><? echo $row['chapter10'];?></div>
+        <div class="publ">
+          <div id="pr-nml0" style="height:198px;width:900px;" class="pr-widget"></div>
+        </div>
         <div id="interest">
           <div>
             <p class="title">Tal vez te pueda interesar...</p>
             <div class="row"><?php $q="SELECT * FROM hentai LIMIT 0,4"; $res = $conexion->query($q); while ($row = $res->fetch_assoc()){ ?>
               <figure class="columns three hen rr"><img src="<? echo $row["img"];?>" alt="<? echo $row["title"];?>" class="rrst">
-                <figcaption><? echo $row["title"];?></figcaption><a href="http://short.am/s/49390?s=<? echo $row["lnk"];?>"></a>
+                <figcaption><? echo $row["title"];?></figcaption><a href="http://short.am/s/49390?s=http://heaven-night.com/tmp/<? echo $row["lnk"];?>"></a>
               </figure><?php } ?>
             </div>
           </div>
@@ -129,7 +144,10 @@ while($row = $cdb->fetch_assoc()){
             </form>
           </div>
         </div>
-        <p>"Heaven's Night" es una division de <a href='http://limbocity.xyz' target='_blank'>"Limbo City"</a>, el hecho de estar navegando por esta pagina implica que aceptas la politica de Cookies y el tipo de material por el que existe este sitio (segun nuestras <a href='http://privacy.limbocity.xyz' target='_blank'>politicas de uso y privacidad</a>). Ademas de declarar que eres mayor de edad segun las leyes de la localidad en que vivas.</p>
+        <p>
+          "Heaven's Night" es una division de <a href='http://limbocity.xyz' target='_blank'>"Limbo City"</a>, el hecho de estar navegando por esta pagina implica que aceptas la politica de Cookies y el tipo de material por el que existe este sitio (segun nuestras <a href='http://privacy.limbocity.xyz' target='_blank'>politicas de uso y privacidad</a>). Ademas de declarar que eres mayor de edad segun las leyes de la localidad en que vivas.
+          
+        </p>
       </article>
     </footer>
   </body>

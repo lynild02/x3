@@ -31,6 +31,8 @@
     <link rel="stylesheet" href="<?=$serv?>node_modules/fullpage.js/dist/jquery.fullpage.min.css">
     <script type="text/javascript" src="<?=$serv?>node_modules/fullpage.js/dist/jquery.fullpage.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript">juicy_code='34540333s224u4p2x2b4435484';</script>
+    <script type="text/javascript" src="http://js.juicyads.com/jac.js" charset="utf-8"></script>
   </head>
   <body class="page-overview">
     <div class="loader-c">
@@ -49,15 +51,15 @@
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
+    
     ga('create', 'UA-100788127-1', 'auto');
     ga('send', 'pageview');
   </script>
   <!--script(type="text/javascript" async).
-  var _prvar=_prvar||new Object();
-  (function(pa,s){if(document.getElementById('pr444a070e'))return false;
-
-  pa=document.createElement('script');pa.type='text/javascript';pa.async=true;pa.id='pr444a070e';pa.src='//prscripts.com/pub.js';
-      s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(pa,s);})();
+  //var _prvar=_prvar||new Object();
+  //(function(pa,s){if(document.getElementById('pr444a070e'))return false;
+  
+  //pa=document.createElement('script');pa.type='text/javascript';pa.async=true;pa.id='pr444a070e';pa.src='//prscripts.com/pub.js';
+      //s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(pa,s);})();
   -->
 </html>
